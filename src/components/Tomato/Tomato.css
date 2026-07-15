@@ -1,0 +1,10 @@
+.tomato {
+  width: 100%;
+  height: 54px;
+  border-radius: 6px;
+  background: var(--tomato);
+  color: var(--text-on-fillings);
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+}

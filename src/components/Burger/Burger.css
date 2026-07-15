@@ -1,0 +1,11 @@
+.burger {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.burger-stack {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+}

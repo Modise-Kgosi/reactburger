@@ -1,0 +1,7 @@
+.base-bread {
+  width: 100%;
+  height: 70px;
+  border-radius: 6px 6px 22px 22px;
+  background: var(--bread-base);
+  box-shadow: inset 0 -10px 0 rgba(255, 255, 255, 0.08);
+}
