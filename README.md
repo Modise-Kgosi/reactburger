@@ -1,75 +1,90 @@
-# React + TypeScript + Vite
+# React Burger 🍔
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React app that renders a customizable burger. Users can toggle fillings on and off to build their own burger, no lettuce-haters left behind.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project was built as a group coding exercise to practice:
 
-## React Compiler
+- Creating and composing React components
+- Passing props between parent and child components
+- Managing state to conditionally render UI
+- Splitting UI into small, single-responsibility components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **Exercise 1** — Renders a burger made up of individual components:
+  - `TopBread` – the top bun
+  - `Tomato` – the red filling
+  - `Meat` – the patty
+  - `Lettuce` – the green filling
+  - `BaseBread` – the bottom bun
+- **Exercise 2** — Users can select/deselect fillings (e.g. remove lettuce) and see the burger update in real time.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
 
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+src/
+├── components/
+│   ├── Burger/
+│   ├── TopBread/
+│   ├── BaseBread/
+│   ├── Tomato/
+│   ├── Meat/
+│   ├── Lettuce/
+│   └── FillingControls/
+├── App.jsx
+├── index.css
+└── main.jsx
 ```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or later recommended)
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/<your-username>/react-burger.git
+cd react-burger
+npm install
+```
+
+### Running Locally
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+## Usage
+
+Use the filling controls on the page to toggle tomato, meat, and lettuce on or off. The burger updates instantly to reflect your selection.
+
+## Deployment
+
+This project is deployed at: `<add your deployed link here>`
+
+## Author
+
+Built by Modise Kgosi Moremedi as part of a group coding exercise (Lesson: Mohale).
+
+## Resources
+
+- [Your First Component – React Docs](https://react.dev/learn/your-first-component)
+- [Importing and Exporting Components – React Docs](https://react.dev/learn/importing-and-exporting-components)
